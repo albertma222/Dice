@@ -4,25 +4,28 @@ void setup()
 }
 void draw()
 {
-	//your code here
+  background(255);
+  Die.show();
 }
 void mousePressed()
 {
 	redraw();
 }
-class Die //models one single dice cube
+class Die
 {
-	//variable declarations here
-	Die(int x, int y) //constructor
+	int x;
+  int y;
+	Die(int x, int y)
 	{
-		//variable initializations here
+    
 	}
-	void roll()
+	void roll(int x, int y)
 	{
 		//your code here
 	}
 	void show()
 	{
-		//your code here
+		ellipse(x, y, 10, 10);
+    ellipse(x, y, 20, 20);
 	}
 }
