@@ -54,22 +54,28 @@ class Die
     {
     fill(0);
     ellipse(MyX + 50, MyY + 50, 20, 20);
+    ellipse(MyX + 110, MyY + 50, 20, 20);
+    ellipse(MyX + 50, MyY + 110, 20, 20);
     ellipse(MyX + 110, MyY + 110, 20, 20);
     }
     else if(Roll == 5)
     {
     fill(0);
-    
-    ellipse(MyX + 50, MyY + 50, 20, 20);    
+    ellipse(MyX + 50, MyY + 110, 20, 20);
+    ellipse(MyX + 50, MyY + 50, 20, 20);
     ellipse(MyX + 80, MyY + 80, 20, 20);
     ellipse(MyX + 110, MyY + 110, 20, 20);
-    
+    ellipse(MyX + 110, MyY + 50, 20, 20);
     }
     else if(Roll == 6)
     {
     fill(0);
+    ellipse(MyX + 50, MyY + 110, 20, 20);
     ellipse(MyX + 50, MyY + 50, 20, 20);
+    ellipse(MyX + 50, MyY + 80, 20, 20);
+    ellipse(MyX + 110, MyY + 80, 20, 20);
     ellipse(MyX + 110, MyY + 110, 20, 20);
+    ellipse(MyX + 110, MyY + 50, 20, 20);
     }
 	}
 }
