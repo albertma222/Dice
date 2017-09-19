@@ -1,13 +1,19 @@
 void setup()
 {
-  size(500, 500);
+  size(700, 700);
 	noLoop();
 }
 void draw()
 {
-  background(205);
-  Die John = new Die(0, 0);
-  John.show();
+  background(205, 20, 20);
+  for(int y = 0; y < 500; y = y + 60)
+  {
+    for(int x = 65; x < 600; x = x + 60)
+    {
+      Die John = new Die(x, y);
+      John.show();
+    }
+  }
 }
 void mousePressed()
 {
@@ -20,9 +26,9 @@ class Die
   int Roll;
 	Die(int x, int y)
 	{
-    int MyX = x;
-    int MyY = y;
-    roll();
+     MyX = x;
+     MyY = y;
+     roll();
 	}
 	void roll()
 	{
@@ -31,51 +37,51 @@ class Die
 	void show()
 	{
     fill(255);
-    rect(MyX + 30, MyY + 30, 100, 100, 15);
+    rect(MyX + 15, MyY + 15, 50, 50, 7.5);
     if(Roll == 1)
     {
     fill(0);
-    ellipse(MyX + 80, MyY + 80, 20, 20);
+    ellipse(MyX + 40, MyY + 40, 10, 10);
     }
     else if(Roll == 2)
     {
     fill(0);
-    ellipse(MyX + 50, MyY + 50, 20, 20);
-    ellipse(MyX + 110, MyY + 110, 20, 20);
+    ellipse(MyX + 25, MyY + 25, 10, 10);
+    ellipse(MyX + 55, MyY + 55, 10, 10);
     }
     else if(Roll == 3)
     {
     fill(0);
-    ellipse(MyX + 50, MyY + 50, 20, 20);
-    ellipse(MyX + 80, MyY + 80, 20, 20);
-    ellipse(MyX + 110, MyY + 110, 20, 20);    
+    ellipse(MyX + 25, MyY + 25, 10, 10);
+    ellipse(MyX + 40, MyY + 40, 10, 10);
+    ellipse(MyX + 55, MyY + 55, 10, 10);
     }
     else if(Roll == 4)
     {
     fill(0);
-    ellipse(MyX + 50, MyY + 50, 20, 20);
-    ellipse(MyX + 110, MyY + 50, 20, 20);
-    ellipse(MyX + 50, MyY + 110, 20, 20);
-    ellipse(MyX + 110, MyY + 110, 20, 20);
+    ellipse(MyX + 25, MyY + 25, 10, 10);
+    ellipse(MyX + 55, MyY + 25, 10, 10);
+    ellipse(MyX + 25, MyY + 55, 10, 10);
+    ellipse(MyX + 55, MyY + 55, 10, 10);
     }
     else if(Roll == 5)
     {
     fill(0);
-    ellipse(MyX + 50, MyY + 110, 20, 20);
-    ellipse(MyX + 50, MyY + 50, 20, 20);
-    ellipse(MyX + 80, MyY + 80, 20, 20);
-    ellipse(MyX + 110, MyY + 110, 20, 20);
-    ellipse(MyX + 110, MyY + 50, 20, 20);
+    ellipse(MyX + 25, MyY + 55, 10, 10);
+    ellipse(MyX + 25, MyY + 25, 10, 10);
+    ellipse(MyX + 40, MyY + 40, 10, 10);
+    ellipse(MyX + 55, MyY + 55, 10, 10);
+    ellipse(MyX + 55, MyY + 25, 10, 10);
     }
     else if(Roll == 6)
     {
     fill(0);
-    ellipse(MyX + 50, MyY + 110, 20, 20);
-    ellipse(MyX + 50, MyY + 50, 20, 20);
-    ellipse(MyX + 50, MyY + 80, 20, 20);
-    ellipse(MyX + 110, MyY + 80, 20, 20);
-    ellipse(MyX + 110, MyY + 110, 20, 20);
-    ellipse(MyX + 110, MyY + 50, 20, 20);
+    ellipse(MyX + 25, MyY + 55, 10, 10);
+    ellipse(MyX + 25, MyY + 25, 10, 10);
+    ellipse(MyX + 25, MyY + 40, 10, 10);
+    ellipse(MyX + 55, MyY + 40, 10, 10);
+    ellipse(MyX + 55, MyY + 55, 10, 10);
+    ellipse(MyX + 55, MyY + 25, 10, 10);
     }
 	}
 }
