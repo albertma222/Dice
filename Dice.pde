@@ -1,5 +1,10 @@
+int totalRoll;
+
 void setup()
 {
+  PFont myFont;
+  myFont = loadFont("KunstlerScript-48.vlw");
+  textFont(myFont);
   size(700, 700);
 	noLoop();
 }
@@ -16,9 +21,13 @@ void draw()
     for(int x = 70; x < 600; x = x + 60)
     {
       Die John = new Die(x, y);
+      totalRoll = John.Roll + totalRoll;
       John.show();
     }
   }
+  stroke(0);
+  textSize(40);
+  text("Total amount rolled so far: " + totalRoll, 70, 650);
 }
 void mousePressed()
 {
@@ -41,6 +50,10 @@ class Die
 	}
 	void show()
 	{
+    fill(0);
+    textSize(60);
+    smooth();
+    text("Click Anywhere to Roll!", 120, 600);
     fill(255);
     rect(MyX + 15, MyY + 15, 50, 50, 7.5);
     if(Roll == 1)
