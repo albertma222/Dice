@@ -6,9 +6,14 @@ void setup()
 void draw()
 {
   background(205, 20, 20);
+  noStroke();
+  fill(250, 200, 5);
+  rect(30, 0, 30, 700);
+  rect(640, 0, 30, 700);
+  rect(640, 0, 30, 700);
   for(int y = 0; y < 500; y = y + 60)
   {
-    for(int x = 65; x < 600; x = x + 60)
+    for(int x = 70; x < 600; x = x + 60)
     {
       Die John = new Die(x, y);
       John.show();
