@@ -23,10 +23,10 @@ void draw()
     {
       Die John = new Die(x, y);
       totalRoll = John.Roll + totalRoll;
+      currentRoll = John.Roll + currentRoll;
       John.show();
     }
   }
-  int currentRoll = totalRoll;
   stroke(0);
   textSize(40);
   text("Total amount rolled so far: " + totalRoll, 70, 640);
@@ -34,6 +34,15 @@ void draw()
   fill(0);
   textSize(60);
   text("Click Anywhere to Roll!", 120, 600);
+  textSize(38);
+  if(currentRoll >= 300)
+  {
+    text("Winner winner chicken dinner!", 300, 680);
+  }
+  else
+  {
+    text("Here , take this L.", 300, 680);
+  }
 }
 void mousePressed()
 {
