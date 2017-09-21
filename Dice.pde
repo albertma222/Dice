@@ -1,4 +1,5 @@
 int totalRoll;
+int currentRoll;
 
 void setup()
 {
@@ -25,13 +26,19 @@ void draw()
       John.show();
     }
   }
+  int currentRoll = totalRoll;
   stroke(0);
   textSize(40);
-  text("Total amount rolled so far: " + totalRoll, 70, 650);
+  text("Total amount rolled so far: " + totalRoll, 70, 640);
+  text("Current Roll: " + currentRoll, 60, 680);
+  fill(0);
+  textSize(60);
+  text("Click Anywhere to Roll!", 120, 600);
 }
 void mousePressed()
 {
-	redraw();
+  redraw();
+  currentRoll = 0;
 }
 class Die
 {
@@ -50,10 +57,6 @@ class Die
 	}
 	void show()
 	{
-    fill(0);
-    textSize(60);
-    smooth();
-    text("Click Anywhere to Roll!", 120, 600);
     fill(255);
     rect(MyX + 15, MyY + 15, 50, 50, 7.5);
     if(Roll == 1)
