@@ -52,11 +52,11 @@ void draw()
   {
     text("Maybe it's time to stop...", 200, 315);
   }
-    if(totalRoll >= 20000)
+  if(totalRoll >= 20000)
   {
     text("National Gambling Helpline: 1-800-522-4700", 200, 375);
   }
-    if(totalRoll >= 30000)
+  if(totalRoll >= 30000)
   {
     text("Sorry, this is the last Easter egg. :<", 200, 435);
   }
