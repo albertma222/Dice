@@ -3,9 +3,6 @@ int currentRoll;
 
 void setup()
 {
-  PFont myFont;
-  myFont = loadFont("KunstlerScript-48.vlw");
-  textFont(myFont);
   size(700, 700);
 	noLoop();
 }
@@ -28,20 +25,40 @@ void draw()
     }
   }
   stroke(0);
-  textSize(40);
+  textSize(20);
   text("Total amount rolled so far: " + totalRoll, 70, 640);
-  text("Current Roll: " + currentRoll, 60, 680);
+  text("Current Roll: " + currentRoll, 70, 680);
   fill(0);
-  textSize(60);
+  textSize(40);
   text("Click Anywhere to Roll!", 120, 600);
-  textSize(38);
+  textSize(20);
   if(currentRoll >= 300)
   {
-    text("Winner winner chicken dinner!", 300, 680);
+    text("Winner winner, chicken dinner!", 300, 680);
   }
   else
   {
-    text("Here , take this L.", 300, 680);
+    text("Here, take this L.", 300, 680);
+  }
+  if(totalRoll >= 2500)
+  {
+    text("High Roller, huh?", 200, 195);
+  }
+  if(totalRoll >= 5000)
+  {
+    text("Wow, you must really like this program... :D", 200, 255);
+  }
+  if(totalRoll >= 10000)
+  {
+    text("Maybe it's time to stop...", 200, 315);
+  }
+    if(totalRoll >= 20000)
+  {
+    text("National Gambling Helpline: 1-800-522-4700", 200, 375);
+  }
+    if(totalRoll >= 30000)
+  {
+    text("Sorry, this is the last Easter egg. :<", 200, 435);
   }
 }
 void mousePressed()
